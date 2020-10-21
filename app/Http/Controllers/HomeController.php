@@ -25,8 +25,6 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        DB::insert('insert into users (name,email, password) values (?,?,?)', ['Dayle', '123','123']);
-
         return view('home');
     }
 }
