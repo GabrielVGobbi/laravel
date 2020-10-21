@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Teste;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,8 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
+        DB::insert('insert into users (name,email, password) values (?,?,?)', ['Dayle', '123','123']);
+
         return view('home');
     }
 }
