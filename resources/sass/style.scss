@@ -3,6 +3,9 @@ $color-white: rgb(255, 255, 255);
 $color-gray-light: rgba($color-white, 0.15);
 $color-gray-dark: rgba($color-black, 0.15);
 
+$light: #dddddd;
+$dark: #000;
+
 :root {
     --color-page-background: #{$color-gray-dark};
     --color-text: #{$color-black};

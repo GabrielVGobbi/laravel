@@ -60,7 +60,7 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                             document.getElementById('logout-form').submit();">
+                                                                                 document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -86,6 +86,17 @@
 <script src="{{ asset('js/app.js') }}"></script>
 <script>
     @include('_partials.toastr_notify')
+
+    $('.switch').click(() => {
+        $([".light [class*='-light']", ".dark [class*='-dark']"]).each((i, ele) => {
+            $(ele).toggleClass('bg-light bg-dark')
+            $(ele).toggleClass('text-light text-dark')
+            $(ele).toggleClass('navbar-light navbar-dark')
+        })
+        // toggle body class selector
+        $('body').toggleClass('light dark')
+    })
+
 </script>
 
 </html>
