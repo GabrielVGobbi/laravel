@@ -1,5 +1,6 @@
-require('./bootstrap');
-require('./main');
 
+require('./bootstrap');
+
+require('./main');
 
 

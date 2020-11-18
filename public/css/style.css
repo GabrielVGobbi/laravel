@@ -1,0 +1,22 @@
+:root {
+  --color-page-background: rgba(0, 0, 0, 0.15);
+  --color-text: black;
+  --color-border: black;
+  --color-article-background: white;
+  --color-article-shadow: rgba(0, 0, 0, 0.15);
+}
+
+.dark {
+  --color-page-background: black;
+  --color-text: white;
+  --color-border: white;
+  --color-article-background: rgba(255, 255, 255, 0.15);
+  --color-article-shadow: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background-color: var(--color-page-background);
+  color: var(--color-text);
+  font-family: "Poppins", Calibri, "Trebuchet MS", sans-serif;
+}
+

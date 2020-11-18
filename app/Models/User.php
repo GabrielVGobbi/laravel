@@ -8,9 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Permissions\HasPermissionsTrait;
 
+use Spatie\Activitylog\Traits\LogsActivity;
+
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, HasPermissionsTrait;
+    use HasFactory, Notifiable, LogsActivity, HasPermissionsTrait;
+
 
     /**
      * The attributes that are mass assignable.

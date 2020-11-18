@@ -16,22 +16,24 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('uuid')->unique();
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->integer('is_active')->default('0');
+
             $table->rememberToken();
             $table->timestamps();
         });
-
-        DB::table('users')->insert(
+ DB::table('users')->insert(
             [
                 'name' => 'Gabriel Gobbi',
                 'password' => '$2y$10$QygCRy.mrYzVL6vkvatzEepNMFud3bKvvLBAwz/Jbvrms9qFB9p2e',
                 'email' => 'gabriel.gobbi15@gmail.com',
+                'uuid' => 'e3f083e2-1539-4241-affc-879d21ff4875'
             ]
-        );
-    }
+        );    }
 
     /**
      * Reverse the migrations.
